@@ -613,7 +613,29 @@
     var currentDate = new Date();
   // Add 7 hours to the current date to get the target date (GMT+7)
     var targetDate = new Date(currentDate.getTime() + 7 * 60 * 60 * 1000);
+// Configure and initialize simplyCountdown
+    simplyCountdown('.simply-countdown-one', {
+        year: targetDate.getFullYear(),
+        month: targetDate.getMonth() + 1,
+        day: targetDate.getDate(),
+        hours: targetDate.getHours(),
+        minutes: targetDate.getMinutes(),
+        seconds: targetDate.getSeconds(),
+        enableUtc: false,  // Use false if your target date is in local time
+        words: { // Custom words for each time unit
+            days: 'ngày',
+            hours: 'giờ',
+            minutes: 'phút',
+            seconds: 'giây',
+            pluralLetter: ''
+        },
+        plural: true, // Display or not the plural hours/minutes/seconds
+        inline: false // Set to true to get responsive inline mode
+    });
+</script>
 
+</body>
+</html>
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
