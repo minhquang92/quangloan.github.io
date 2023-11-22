@@ -609,7 +609,10 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var targetDate = new Date("2024-01-07T00:00:00+07:00");
+     // Get the current date and time
+    var currentDate = new Date();
+  // Add 7 hours to the current date to get the target date (GMT+7)
+    var targetDate = new Date(currentDate.getTime() + 7 * 60 * 60 * 1000);
 
     // default example
     simplyCountdown('.simply-countdown-one', {
