@@ -611,9 +611,6 @@
 	<script>
      // Get the current date and time
         var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-
-  // Add 7 hours to the current date to get the target date (GMT+7)
-    var targetDate = new Date(currentDate.getTime() + 7 * 60 * 60 * 1000);
 // Configure and initialize simplyCountdown
     simplyCountdown('.simply-countdown-one', {
         year: targetDate.getFullYear(),
