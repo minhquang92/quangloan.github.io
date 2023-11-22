@@ -115,7 +115,51 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>  Quang &amp; Loan </h1>
 							<h2>Lễ Thành Hôn </h2>
-							<div class="simply-countdown simply-countdown-one"></div>
+							<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Example</title>
+    <!-- Include simplyCountdown library -->
+    <script src="https://cdn.jsdelivr.net/npm/simply-countdown@2.0.0/dist/simplyCountdown.min.js"></script>
+</head>
+<body>
+
+<!-- Display countdown in this element -->
+<div id="countdown"></div>
+
+<script>
+    // Get the current date and time
+    var currentDate = new Date();
+
+    // Add 7 hours to the current date to get the target date (GMT+7)
+    var targetDate = new Date(currentDate.getTime() + 7 * 60 * 60 * 1000);
+
+    // Configure and initialize simplyCountdown
+    simplyCountdown('#countdown', {
+        year: targetDate.getFullYear(),
+        month: targetDate.getMonth() + 1,
+        day: targetDate.getDate(),
+        hours: targetDate.getHours(),
+        minutes: targetDate.getMinutes(),
+        seconds: targetDate.getSeconds(),
+        enableUtc: false,  // Use false if your target date is in local time
+        words: { // Custom words for each time unit
+            days: 'ngày',
+            hours: 'giờ',
+            minutes: 'phút',
+            seconds: 'giây',
+            pluralLetter: ''
+        },
+        plural: true, // Display or not the plural hours/minutes/seconds
+        inline: false // Set to true to get responsive inline mode
+    });
+</script>
+
+</body>
+</html>
+
 							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
 						</div>
 					</div>
